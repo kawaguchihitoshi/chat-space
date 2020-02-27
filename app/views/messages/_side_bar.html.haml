@@ -4,13 +4,15 @@
       .side-header__box__top__left-messages
         = current_user.name
       .side-header__box__top__right-messages
-        = link_to "＃", class: "side-header__box__top__right-messages__btn-left" do
+        = link_to new_group_path,class: "side-header__box__top__right-messages__btn-left" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "side-header__box__top__right-messages__btn-right" do
           = icon('fas', 'cog')
-  .side-header__mid
-    .side-header__mid__messages
-      .side-header__mid__messages-top
-        aあ
-      .side-header__mid__messages-bottom
-        あ
+  .side-header__groups-list
+    - current_user.groups.each do |group|
+      .side-header__groups-list__group
+        = link_to '#' do
+          .side-header__groups-list__group__name
+            = group.name
+          .side-header__groups-list__group__message
+            メッセージはまだありません。

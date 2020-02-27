@@ -41,20 +41,23 @@
     }
   }
 
-  &__mid{
+  &__groups-list{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px 20px 0;
     color: #ffffff;
-    &__messages{
+    &__group{
       margin-bottom: 40px;
-    }
-    &__messages-top{
-      font-size: 15px;
-    margin-bottom: 5px;
-    }
-    &__messages-bottom{
-      font-size: 11px;
+      &__name{
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: #ffffff;
+        }
+      
+      &__message{
+        font-size: 11px;
+        color: #ffffff;
+      }
     }
   }
 }
@@ -148,4 +151,8 @@
     }
   }
   
+}
+
+a{
+  text-decoration: none;
 }
