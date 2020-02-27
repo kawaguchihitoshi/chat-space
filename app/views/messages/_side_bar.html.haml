@@ -2,11 +2,11 @@
   .side-header__box
     .side-header__box__top
       .side-header__box__top__left-messages
-        masa
+        = current_user.name
       .side-header__box__top__right-messages
         = link_to "＃", class: "side-header__box__top__right-messages__btn-left" do
           = icon('far', 'edit')
-        = link_to "＃", class: "side-header__box__top__right-messages__btn-right" do
+        = link_to edit_user_path(current_user), class: "side-header__box__top__right-messages__btn-right" do
           = icon('fas', 'cog')
   .side-header__mid
     .side-header__mid__messages
