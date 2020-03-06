@@ -43,7 +43,7 @@ $(function(){
   if (message.content && message.image) {
     //data-idが反映されるようにしている
     var html = 
-    `<div class="message">
+    `<div class="message"data-message-id= ${message.id}>
       <div class="upper-message">
         <div class="upper-message__user-name">
          ${message.user_name}
@@ -61,7 +61,7 @@ $(function(){
     </div>`
   } else if (message.content) {
     var html = 
-    `<div class="message">
+    `<div class="message"data-message-id= ${message.id}>
       <div class="upper-message">
         <div class="upper-message__user-name">
         ${message.user_name}
@@ -78,7 +78,7 @@ $(function(){
     </div>`
   } else if (message.image) {
     var html = 
-    `<div class="message">
+    `<div class="message"data-message-id= ${message.id}>
     ${message.id}
       <div class="upper-message">
         <div class="upper-message__user-name">
