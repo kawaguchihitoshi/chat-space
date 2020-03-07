@@ -50,7 +50,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'unicorn'
+  gem 'unicorn','5.5.3'
 end
 
 
